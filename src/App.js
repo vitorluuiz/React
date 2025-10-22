@@ -24,6 +24,7 @@ function App() {
         if (resposta.status === 200) {
           console.log("Login efetuado com sucesso");
           window.alert("Login efetuado com sucesso");
+          window.localStorage.setItem("token", resposta.data.token);
         }
       }).catch((erro) => {
         console.log(erro);
